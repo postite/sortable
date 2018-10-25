@@ -1,0 +1,16 @@
+{
+    "name": "sortable",
+    "url" : "http://postite.com",
+    "license": "MIT",
+    "tags": ["extern", "js"],
+    "description": "one desc",
+    "version": "0.8.0",
+    "classPath": "",
+    "releasenote": "still trying",
+    "contributors": ["postite"],
+    "dependencies": {
+      "record-macros": "",
+      "compiletime": ""
+      
+    }
+  }
