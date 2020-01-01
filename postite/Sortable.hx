@@ -131,24 +131,24 @@ typedef SortableOptions={
 @:native("Sortable")
 extern class Sortable {
 	
-	public function new(el:Element,?options:SortableOptions){}
+	public  function new(el:Element,?options:SortableOptions);
 	//Link to the active instance
 	public static var active:Sortable;
 
-	public static  function create(el:Element,?options:SortableOptions):Sortable{}
+	public static  function create(el:Element,?options:SortableOptions):Sortable;
 	//Get or set the option.
-	public function option(optionName:String,?val:Dynamic):Dynamic{}
+	public function option(optionName:String,?val:Dynamic):Dynamic;
 	//For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.
 
-	public function closest(sel:Selector,?el:js.html.Element):js.html.Element{}
+	public function closest(sel:Selector,?el:js.html.Element):js.html.Element;
 	//Serializes the sortable's item data-id's (dataIdAttr option) into an array of string.
-	public function toArray():Array<String>{}
+	public function toArray():Array<String>;
 	//Sorts the elements according to the array.
-	public function sort(order:Array<String>):Void{}
+	public function sort(order:Array<String>):Void;
 	//Save the current sorting (see store)
-	public function save():Void{}
+	public function save():Void;
 	//Removes the sortable functionality completely.
-	public function destroy():Void{}
+	public function destroy():Void;
 	public static inline  function utils():Utils{
 		return untyped __js__('Sortable.utils');
 	}
@@ -157,8 +157,8 @@ extern class Sortable {
 
 extern class Utils{
 	
-public function on(el:Element, event:String, fn:Func):Dynamic{}// — attach an event handler function
-public function off(el:Element, event:String, fn:Func):Dynamic{}// — remove an event handler
+public  function on(el:Element, event:String, fn:Func):Dynamic;// — attach an event handler function
+public  function off(el:Element, event:String, fn:Func):Dynamic;// — remove an event handler
 
 //public function css(el:Element):Dynamic{}//:Object — get the values of all the CSS properties
 //public function css(el:Element, prop:String):Dynamic{}//:Mixed — get the value of style properties
@@ -166,12 +166,12 @@ public function off(el:Element, event:String, fn:Func):Dynamic{}// — remove an
 @:overload(function(el:Element):Dynamic{})
 @:overload(function(el:Element, prop:String):Dynamic{})
 @:overload(function(el:Element, props:Dynamic):Dynamic{})
-public function css(el:Element, prop:String, value:String):Dynamic{}// — set one CSS properties
+public  function css(el:Element, prop:String, value:String):Dynamic;// — set one CSS properties
 
-public function find(ctx:Element, tagName:String, ?iterator:Func):Array<Element>{}// — get elements by tag name
-public function bind(ctx:Dynamic, fn:Func):Dynamic{}//Function — Takes a function and returns a new one that will always have a particular context
-public function is(el:Element, selector:String):Bool{}// — check the current matched set of elements against a selector
-public function closest(el:Element, selector:String, ?ctx:Element):Null<Element>{}//|Null — for each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree
-public function clone(el:Element):Element{}// — create a deep copy of the set of matched elements
-public function toggleClass(el:Element, name:String, state:Bool):Void{}// — add or remove one classes from each element
+public  function find(ctx:Element, tagName:String, ?iterator:Func):Array<Element>;// — get elements by tag name
+public  function bind(ctx:Dynamic, fn:Func):Dynamic;//Function — Takes a function and returns a new one that will always have a particular context
+public function is(el:Element, selector:String):Bool;// — check the current matched set of elements against a selector
+public function closest(el:Element, selector:String, ?ctx:Element):Null<Element>;//|Null — for each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree
+public function clone(el:Element):Element;// — create a deep copy of the set of matched elements
+public function toggleClass(el:Element, name:String, state:Bool):Void;// — add or remove one classes from each element
 }
